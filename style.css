@@ -218,21 +218,38 @@ section { position: relative; z-index: 1; }
 }
 .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
 
+
+.hero-side {
+  position: absolute;
+  right: 3rem;
+  top: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
 .profile-pic {
-  width: 85px;
-  height: 85px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid #00d4aa;
   box-shadow: 0 0 12px rgba(0,212,170,0.25);
 }
 
+@media (max-width: 768px) {
+  .hero-side {
+    display: none;
+  }
+}
+
 /* floating GPA badge */
 .hero-badge {
-  position: absolute;
+  position: static;
   right: 3rem;
   top: 50%;
-  transform: translateY(-50%);
+  transform: none;
   width: 120px; height: 120px;
   border-radius: 50%;
   border: 2px solid var(--accent);
